@@ -10,6 +10,7 @@ import (
 func main() {
 	e := echo.New()
 	e.Static("/vue", "vue-app/dist")
+	e.Static("/vue-org", "vue-app")
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!2")
 	})
