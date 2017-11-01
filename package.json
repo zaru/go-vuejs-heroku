@@ -1,4 +1,10 @@
 {
+  "name": "go-vuejs-heroku",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
   "start": {
     "postinstall": "cd vue-app && npm install && npm run build"
   }
