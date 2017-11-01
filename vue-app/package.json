@@ -10,7 +10,7 @@
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
     "heroku-prebuild": "npm run build",
-    "heroku-postbuild": "echo 1000"
+    "heroku-postbuild": "npm run build"
   },
   "start": {
     "postinstall": "npm run build"
