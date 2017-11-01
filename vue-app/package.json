@@ -12,6 +12,9 @@
     "heroku-prebuild": "npm run build",
     "heroku-postbuild": "echo 1000"
   },
+  "start": {
+    "postinstall": "npm run build"
+  },
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
