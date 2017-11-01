@@ -1,5 +1,5 @@
 {
   "start": {
-    "postinstall": "cd vue-app && npm install"
+    "postinstall": "cd vue-app && npm install && npm run build"
   }
 }
