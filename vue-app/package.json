@@ -8,12 +8,7 @@
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src",
-    "heroku-prebuild": "npm run build",
-    "heroku-postbuild": "npm run build"
-  },
-  "start": {
-    "postinstall": "npm run build"
+    "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
     "vue": "^2.5.2",
