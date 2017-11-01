@@ -5,7 +5,7 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
-  "start": {
-    "postinstall": "cd vue-app && npm install"
+  "scripts": {
+    "postinstall": "npm install --prefix ./vue-app"
   }
 }
