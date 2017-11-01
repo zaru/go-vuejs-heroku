@@ -1,1 +1,1 @@
-web: furikaeri
+web: go-vuejs-heroku
