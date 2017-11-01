@@ -1,8 +1,5 @@
 {
   "start": {
     "postinstall": "cd vue-app && npm install"
-  },
-  "scripts": {
-    "heroku-postbuild": "cd vue-app && npm run build"
   }
 }
