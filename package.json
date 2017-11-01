@@ -6,6 +6,6 @@
     "npm": "4.2.0"
   },
   "scripts": {
-    "postinstall": "npm --prefix ./vue-app install ./vue-app"
+    "postinstall": "npm --prefix ./vue-app install ./vue-app && cd ./vue-app && npm run build"
   }
 }
