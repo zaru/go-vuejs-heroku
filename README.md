@@ -12,6 +12,7 @@ dep ensure
 ```
 heroku create go-vuejs-heroku
 heroku buildpacks:add heroku/go --app go-vuejs-heroku
+heroku buildpacks:add heroku/nodejs --app go-vuejs-heroku
 ```
 
 ```
