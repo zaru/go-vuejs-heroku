@@ -45,7 +45,7 @@
 
 [[projects]]
   name = "github.com/pressly/goose"
-  packages = [".","cmd/goose"]
+  packages = ["."]
   revision = "056a4d47dcc4d67fa3947a4f13945a5c690e568b"
   version = "v2.1.0"
 
