@@ -2,4 +2,4 @@
 
 package main
 
-import _ "bitbucket.org/liamstask/goose/cmd/goose"
+import _ "github.com/mattes/migrate"
