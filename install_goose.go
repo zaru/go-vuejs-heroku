@@ -2,4 +2,4 @@
 
 package main
 
-import _ "./cmd"
+import _ "./cmd/main.go"
