@@ -1,6 +1,6 @@
 // +build heroku
 
-package goose2
+package main
 
 import (
 	// Invoke init() functions within migrations pkg.
