@@ -1,8 +1,23 @@
+### Vue.js init
+
 ```
 vue init webpack vue-app
 cd vue-app
 npm install
 ```
+
+### DB
+
+```
+go get -u github.com/pressly/goose/cmd/goose
+```
+
+```
+goose sqlite3 ./sample.db create init sql
+goose sqlite3 ./sample.db up
+```
+
+### Go packages
 
 ```
 dep init
