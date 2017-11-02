@@ -41,7 +41,7 @@ func main() {
 
 		db.Close()
 
-		return c.String(http.StatusOK, "Hello, World!2")
+		return c.String(http.StatusOK, "Hello, World!3")
 	})
 	e.Logger.Fatal(e.Start(":" + os.Getenv("PORT")))
 }
