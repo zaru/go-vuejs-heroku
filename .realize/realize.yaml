@@ -1,0 +1,27 @@
+settings:
+  legacy:
+    force: false
+    interval: 100ms
+server:
+  status: false
+  open: false
+  host: localhost
+  port: 5001
+schema:
+- name: go-vuejs-heroku
+  path: .
+  commands:
+    fmt:
+      status: true
+    install:
+      status: true
+    run: true
+  watcher:
+    paths:
+    - /server.go
+    extensions:
+    - go
+    ignored_paths:
+    - .git
+    - .realize
+    - vendor
