@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/labstack/echo"
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/lib/pq"
 )
 
 func db_exec(db *sql.DB, q string) {
@@ -23,23 +23,9 @@ func main() {
 	e.Static("/vue", "vue-app/dist")
 	e.Static("/vue-org", "vue-app")
 	e.GET("/", func(c echo.Context) error {
-		os.Create("./data.db")
-
-		var db *sql.DB
-
-		db, err := sql.Open("sqlite3", "./sample.db")
-		if err != nil {
-			fmt.Println(err)
-			os.Exit(1)
-		}
-
-		q := "INSERT INTO post "
-		q += " (title, body)"
-		q += " VALUES"
-		q += " ('title', 'hogehoge')"
-		db_exec(db, q)
-
-		db.Close()
+		db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+		defer db.Close()
+		_, err = db.Exec("INSERT INTO post(title, body) VALUES($1, $2);", "foo", "bar")
 
 		return c.String(http.StatusOK, "Hello, World!3")
 	})

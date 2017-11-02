@@ -30,6 +30,11 @@ heroku buildpacks:add heroku/nodejs --app go-vuejs-heroku
 
 heroku config:set NPM_CONFIG_PRODUCTION=false
 heroku config:set GOVERSION=go1.9
+heroku config:set GO_INSTALL_PACKAGE_SPEC="./cmd/... ."
+```
+
+```
+heroku addons:create heroku-postgresql:hobby-dev --app go-vuejs-heroku
 ```
 
 ```
@@ -62,7 +67,6 @@ in `/package.json`
   }
 }
 ```
-
 
 in `server.go`
 

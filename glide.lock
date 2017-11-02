@@ -1,5 +1,5 @@
 hash: e95c7913f829dca4869ea563be62ad10c14ad923241e72061eca7590ecdd74a7
-updated: 2017-11-02T13:29:40.24506896+09:00
+updated: 2017-11-02T14:15:38.442661574+09:00
 imports:
 - name: github.com/labstack/echo
   version: cec7629194fe4bf83b0c72d9a02d340c7a1468ac
@@ -8,12 +8,14 @@ imports:
   subpackages:
   - color
   - log
+- name: github.com/lib/pq
+  version: b609790bd85edf8e9ab7e0f8912750a786177bcf
+  subpackages:
+  - oid
 - name: github.com/mattn/go-colorable
   version: ad5389df28cdac544c99bd7b9161a0b5b6ca9d1b
 - name: github.com/mattn/go-isatty
   version: a5cdd64afdee435007ee3e9f6ed4684af949d568
-- name: github.com/mattn/go-sqlite3
-  version: 5160b48509cf5c877bc22c11c373f8c7738cdb38
 - name: github.com/pressly/goose
   version: 056a4d47dcc4d67fa3947a4f13945a5c690e568b
   subpackages:
@@ -27,10 +29,6 @@ imports:
   subpackages:
   - acme
   - acme/autocert
-- name: golang.org/x/net
-  version: ea0da6f35caf3ff91581c800469e22eef75076f4
-  subpackages:
-  - context
 - name: golang.org/x/sys
   version: 95c6576299259db960f6c5b9b69ea52422860fce
   subpackages:
