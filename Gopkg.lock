@@ -14,16 +14,28 @@
   version = "0.2.3"
 
 [[projects]]
-  name = "github.com/mattn/go-colorable"
-  packages = ["."]
-  revision = "167de6bfdfba052fa6b2d3664c8f5272e23c9072"
-  version = "v0.0.9"
+  branch = "master"
+  name = "github.com/lib/pq"
+  packages = [".","oid"]
+  revision = "b609790bd85edf8e9ab7e0f8912750a786177bcf"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/mattn/go-colorable"
+  packages = ["."]
+  revision = "ad5389df28cdac544c99bd7b9161a0b5b6ca9d1b"
+
+[[projects]]
+  branch = "master"
   name = "github.com/mattn/go-isatty"
   packages = ["."]
-  revision = "0360b2af4f38e8d38c7fce2a9f4e702702d73a39"
-  version = "v0.0.3"
+  revision = "a5cdd64afdee435007ee3e9f6ed4684af949d568"
+
+[[projects]]
+  name = "github.com/pressly/goose"
+  packages = ["."]
+  revision = "056a4d47dcc4d67fa3947a4f13945a5c690e568b"
+  version = "v2.1.0"
 
 [[projects]]
   branch = "master"
@@ -52,6 +64,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "e81cc2cb20c5749b79cb0f42cab35f3eb61055f07d7352d99b06b146175242d4"
+  inputs-digest = "3098d8a4356a82faa89ee21102ddebc60c484ec0e85fa85fc2c06d2994702da6"
   solver-name = "gps-cdcl"
   solver-version = 1
