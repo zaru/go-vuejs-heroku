@@ -21,6 +21,8 @@ npm install
 glide init
 glide get github.com/pressly/goose/cmd/goose
 glide install
+
+heroku config:set GO_INSTALL_PACKAGE_SPEC="./cmd/... ."
 ```
 
 #### dep
@@ -28,6 +30,16 @@ glide install
 ```
 dep init
 dep ensure
+```
+
+in Gopkg.toml
+
+```
+[metadata.heroku]
+  root-package = "github.com/zaru/go-vuejs-heroku"
+  go-version = "go1.9.1"
+  install = [ ".", "./cmd/..." ]
+  ensure = "true"
 ```
 
 ### DB migration
@@ -47,7 +59,6 @@ heroku addons:create heroku-postgresql:hobby-dev --app go-vuejs-heroku
 
 heroku config:set NPM_CONFIG_PRODUCTION=false
 heroku config:set GOVERSION=go1.9
-heroku config:set GO_INSTALL_PACKAGE_SPEC="./cmd/... ."
 ```
 
 ```
