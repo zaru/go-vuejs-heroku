@@ -4,3 +4,6 @@ import:
   version: ^2.1.0
   subpackages:
   - cmd/goose
+- package: bitbucket.org/liamstask/goose
+  subpackages:
+  - cmd/goose
