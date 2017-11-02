@@ -1,2 +1,6 @@
 package: github.com/zaru/go-vuejs-heroku
 import:
+- package: github.com/pressly/goose
+  version: ^2.1.0
+  subpackages:
+  - cmd/goose
