@@ -1,3 +1,10 @@
+# Go, VueJS, PostgreSQL on Heroku demo
+
+- Go 1.9
+  - glide
+- VueJS 2.5
+  - vue-cli
+
 ### Vue.js init
 
 ```
@@ -6,7 +13,7 @@ cd vue-app
 npm install
 ```
 
-### Go packages
+### Go packages (glide)
 
 ```
 glide init
@@ -17,8 +24,8 @@ glide install
 ### DB migration
 
 ```
-goose sqlite3 ./sample.db create init sql
-goose sqlite3 ./sample.db up
+goose postgres $DATABASE_URL create init sql
+goose postgres $DATABASE_URL up
 ```
 
 ### Heroku
@@ -27,14 +34,11 @@ goose sqlite3 ./sample.db up
 heroku create go-vuejs-heroku
 heroku buildpacks:add heroku/go --app go-vuejs-heroku
 heroku buildpacks:add heroku/nodejs --app go-vuejs-heroku
+heroku addons:create heroku-postgresql:hobby-dev --app go-vuejs-heroku
 
 heroku config:set NPM_CONFIG_PRODUCTION=false
 heroku config:set GOVERSION=go1.9
 heroku config:set GO_INSTALL_PACKAGE_SPEC="./cmd/... ."
-```
-
-```
-heroku addons:create heroku-postgresql:hobby-dev --app go-vuejs-heroku
 ```
 
 ```
@@ -44,7 +48,7 @@ touch Procfile
 in `Procfile`
 
 ```
-release: goose sqlite3 ./sample.db up
+release: goose postgres $DATABASE_URL up
 web: go-vuejs-heroku
 ```
 
@@ -65,15 +69,6 @@ in `/package.json`
   "scripts": {
     "postinstall": "npm --prefix ./vue-app install ./vue-app && cd ./vue-app && npm run build"
   }
-}
-```
-
-in `server.go`
-
-```
-func main() {
-	e := echo.New()
-	e.Static("/vue", "vue-app/dist")
 }
 ```
 
