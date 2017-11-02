@@ -21,7 +21,7 @@
 #  version = "2.4.0"
 
 [metadata.heroku]
-  root-package = "github.com/basicinc/furikaeri"
+  root-package = "github.com/zaru/go-vuejs-heroku"
   go-version = "go1.9.1"
   install = [ ".", "./cmd/..." ]
   ensure = "true"

@@ -13,12 +13,21 @@ cd vue-app
 npm install
 ```
 
-### Go packages (glide)
+### Go packages
+
+#### glide
 
 ```
 glide init
 glide get github.com/pressly/goose/cmd/goose
 glide install
+```
+
+#### dep
+
+```
+dep init
+dep ensure
 ```
 
 ### DB migration
