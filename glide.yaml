@@ -1,4 +1,2 @@
-- package: github.com/zaru/go-vuejs-heroku
-  import:
-- package: github.com/zaru/go-vuejs-heroku/cmd/goose
-  import:
+package: github.com/zaru/go-vuejs-heroku
+import:
