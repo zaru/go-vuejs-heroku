@@ -1,6 +1,6 @@
 // +build heroku
 
-package main
+package goose
 
 import (
 	"database/sql"
