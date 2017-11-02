@@ -29,10 +29,6 @@ imports:
   version: a5cdd64afdee435007ee3e9f6ed4684af949d568
 - name: github.com/mattn/go-sqlite3
   version: 5160b48509cf5c877bc22c11c373f8c7738cdb38
-- name: github.com/pressly/goose
-  version: 056a4d47dcc4d67fa3947a4f13945a5c690e568b
-  subpackages:
-  - cmd/goose
 - name: github.com/valyala/bytebufferpool
   version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
 - name: github.com/valyala/fasttemplate
