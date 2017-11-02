@@ -1,5 +1,2 @@
 package: github.com/zaru/go-vuejs-heroku
 import:
-- package: bitbucket.org/liamstask/goose
-  subpackages:
-  - cmd/goose
