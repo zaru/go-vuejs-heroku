@@ -21,7 +21,7 @@
 #  version = "2.4.0"
 
 [[constraint]]
-  name = "github.com/pressly/goose/cmd/goose"
+  name = "github.com/pressly/goose"
 
 [metadata.heroku]
   root-package = "github.com/zaru/go-vuejs-heroku"
