@@ -6,23 +6,22 @@ cd vue-app
 npm install
 ```
 
-### DB
+### Go packages
 
 ```
-go get -u github.com/pressly/goose/cmd/goose
+glide init
+glide get github.com/pressly/goose/cmd/goose
+glide install
 ```
+
+### DB migration
 
 ```
 goose sqlite3 ./sample.db create init sql
 goose sqlite3 ./sample.db up
 ```
 
-### Go packages
-
-```
-dep init
-dep ensure
-```
+### Heroku
 
 ```
 heroku create go-vuejs-heroku
@@ -30,11 +29,18 @@ heroku buildpacks:add heroku/go --app go-vuejs-heroku
 heroku buildpacks:add heroku/nodejs --app go-vuejs-heroku
 
 heroku config:set NPM_CONFIG_PRODUCTION=false
+heroku config:set GOVERSION=go1.9
 ```
 
 ```
 touch Procfile
-echo "web: go-vuejs-heroku" > Procfile
+```
+
+in `Procfile`
+
+```
+release: goose sqlite3 ./sample.db up
+web: go-vuejs-heroku
 ```
 
 ```
