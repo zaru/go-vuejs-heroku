@@ -25,5 +25,5 @@ required = ["github.com/pressly/goose/cmd/goose"]
 [metadata.heroku]
   root-package = "github.com/zaru/go-vuejs-heroku"
   go-version = "go1.9.1"
-  # install = [ "./cmd/...", "./...", ]
+  install = [ "./...", "./vendor/github.com/pressly/goose/cmd" ]
   ensure = "true"
