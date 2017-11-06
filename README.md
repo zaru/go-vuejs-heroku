@@ -1,7 +1,7 @@
 # Go, VueJS, PostgreSQL on Heroku demo
 
 - Go 1.9
-  - glide
+  - dep or glide
 - VueJS 2.5
   - vue-cli
 
